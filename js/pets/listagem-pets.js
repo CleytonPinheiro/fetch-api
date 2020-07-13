@@ -1,3 +1,11 @@
+const removePet = (id) => {
+    if(confirm("Deseja deletar o pet?")){
+        debugger;
+        deletaPet(id)
+        document.location.reload()
+    }
+}
+
 
 const corpoTabela = document.querySelector("[data-conteudo-tabela]");
 
@@ -10,7 +18,7 @@ const exibePet = (nome, dono, tipo, obs, id ) => {
     <td>${tipo}</td>
     <td>${obs}</td>
 
-  <button type="button" class="btn btn-danger" onclick="removeCliente(${id})">Excluir</button>
+  <button type="button" class="btn btn-danger" onclick="removePet(${id})">Excluir</button>
   <a href="edita-clientes.html?id=${id}">
   <button type="button" class="btn btn-info">Editar</button>
   </a>
@@ -23,7 +31,7 @@ const exibePet = (nome, dono, tipo, obs, id ) => {
 listarPets().then( exibe => {
   exibe.forEach(indice => {
     corpoTabela.appendChild(exibePet(indice.nome, indice.donoId, indice.tipo,
-        indice.observacoes))
+        indice.observacoes, indice.id))
   })
  }
  )

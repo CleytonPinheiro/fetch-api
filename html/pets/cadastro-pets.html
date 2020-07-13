@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
     <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -20,22 +18,23 @@
         rel="stylesheet"
     />
     <link rel="stylesheet" href="../../estilos/clientes.css" />
+    <link rel="stylesheet" href="../../estilos/cadastro-clientes.css">
     <title>PetShop!</title>
 </head>
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img
-            src="../../img/doguinho.png"
-            width="50"
-            height="50"
-            class="d-inline-block align-top"
-            alt=""
-        />
-        PetShop!
+      <img
+        src="../../img/doguinho.png"
+        width="50"
+        height="50"
+        class="d-inline-block align-top"
+        alt=""
+      />
+      PetShop!
     </a>
     <ul class="nav justify-content-end">
         <li class="nav-item">
-            <a class="nav-link active" href="../clientes/clientes.html">Clientes</a>
+            <a class="nav-link active" href="clientes.html">Clientes</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="pets.html">Pets</a>
@@ -43,28 +42,35 @@
     </ul>
 </nav>
 
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">Nome Dog</th>
-        <th scope="col">Dono</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Obs.</th>
-        <th scope="col"></th>
+<form data-form-pet>
+    <div class="container">
+        <div class="form-group">
+            <label>Nome Pet</label>
+            <input type="text" class="form-control" data-nome-pet placeholder="Nome do Pet" />
+        </div>
+        <div class="form-group">
+            <label>Dono</label>
+            <input type="text" class="form-control" data-nome-dono placeholder="Nome do dono" />
+        </div>
+        <div class="form-group">
+            <label>Tipo</label>
+            <input type="text" class="form-control" data-tipo placeholder="Espécie" />
+        </div>
+        <div class="form-group">
+            <label>Obs.</label>
+            <input type="text" class="form-control" data-obs placeholder="Observações" />
+        </div>
 
-        <th><a class="btn btn-primary" href="cadastro-pets.html">Novo pet</a></th>
 
-    </tr>
-    </thead>
-    <tbody data-conteudo-tabela>
-
-    </tbody>
-</table>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
 
 <body>
 
 <script src="../../api/pet.js"></script>
-<script src="../../js/pets/listagem-pets.js"></script>
+<script src="../../js/pets/cadastro-pets.js"></script>
+
 
 <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

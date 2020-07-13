@@ -16,7 +16,7 @@ class Tabelas {
   }
 
   criaPets() {
-    const sql = 'CREATE TABLE IF NOT EXISTS Pets (id int NOT NULL AUTO_INCREMENT, nome varchar(150), dono_id int, tipo varchar(100), observacoes text, PRIMARY KEY (id), FOREIGN KEY (dono_id) references Clientes(id))'
+    const sql = 'CREATE TABLE IF NOT EXISTS Pets (id int NOT NULL AUTO_INCREMENT, nome varchar(150), donoId int, tipo varchar(100), observacoes text, PRIMARY KEY (id), FOREIGN KEY (donoId) references Clientes(id))'
 
     this.criaTabela(sql)
   }

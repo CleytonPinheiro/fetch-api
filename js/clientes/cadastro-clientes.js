@@ -12,8 +12,5 @@ formCadastroCliente.addEventListener("submit",
             } else {
                 alert('O CPF não é válido')
             }
-
-
-
     }
 )
