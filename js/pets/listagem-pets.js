@@ -19,7 +19,7 @@ const exibePet = (nome, dono, tipo, obs, id ) => {
     <td>${obs}</td>
 
   <button type="button" class="btn btn-danger" onclick="removePet(${id})">Excluir</button>
-  <a href="edita-clientes.html?id=${id}">
+  <a href="../../html/pets/edita-pets.html?id=${id}">
   <button type="button" class="btn btn-info">Editar</button>
   </a>
 `

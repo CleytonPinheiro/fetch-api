@@ -11,7 +11,16 @@ const listarPets = () => {
         });
 };
 
-const editaPet = (nome, donoId, tipo, obs, id) => {
+const detalhaPet = id => {
+    return fetch(`http://localhost:4000/pets/pet/${id}`,{
+        method: 'GET'
+    })
+        .then(resposta => {
+            return resposta.json()
+        })
+}
+
+const editaPet = (id, nome, donoId, tipo, obs) => {
     const json = JSON.stringify({
         nome: nome,
         donoId: donoId,
@@ -24,10 +33,7 @@ const editaPet = (nome, donoId, tipo, obs, id) => {
             "Content-Type": "application/json"
         },
         body: json
-    }).then(resp => {
-            return resp.body;
-        }
-    );
+    })
 }
 
 const cadastrarPet = (nome, donoId, tipo, obs) => {
