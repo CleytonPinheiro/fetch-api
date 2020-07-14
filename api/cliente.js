@@ -23,7 +23,6 @@ const cadastrarClientes = (nome, cpf) => {
     },
     body: json
   }).then(resp => {
-
       return resp.body;
     }
   );

@@ -11,12 +11,27 @@ const listarPets = () => {
         });
 };
 
-const deletaPet = id => {
+const editaPet = (nome, donoId, tipo, obs, id) => {
+    const json = JSON.stringify({
+        nome: nome,
+        donoId: donoId,
+        tipo: tipo,
+        observacoes: obs
+    });
     return fetch(`http://localhost:4000/pets/pet/${id}`, {
-        method: "DELETE",
-    })}
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: json
+    }).then(resp => {
+            return resp.body;
+        }
+    );
+}
 
 const cadastrarPet = (nome, donoId, tipo, obs) => {
+    debugger
     const json = JSON.stringify({
         nome: nome,
         donoId: donoId,
