@@ -11,6 +11,12 @@ const listarPets = () => {
         });
 };
 
+const deletaPet = id => {
+    return fetch(`http:localhost:4000/pets/pet/${id}`, {
+        method: "DELETE",
+    })}
+
+
 const detalhaPet = id => {
     return fetch(`http://localhost:4000/pets/pet/${id}`,{
         method: 'GET'
